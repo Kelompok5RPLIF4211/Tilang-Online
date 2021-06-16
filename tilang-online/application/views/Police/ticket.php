@@ -39,7 +39,16 @@
                                 <td><?= $ticket['article'] ; ?></td>
                                 <td><?= $ticket['nominal']; ?></td>
                                 <td><?= $ticket['date_create']; ?></td>
-                                <td><?= $ticket['status'] ; ?></td>
+                                <td>
+                                        <?php
+                                        if ($ticket['status'] == 1) {
+                                            echo "BELUM LUNAS";
+                                        } else {
+                                            echo "LUNAS";
+                                        }
+                                        ?>
+                                </td>
+                                
                                 <td class="d-flex text-center">
                                     <button class="btn btn-success mr-1" data-toggle="modal" data-target="#modalEditRule<?= $ticket['id_ticket'] ?>">Edit</button>
                                     <button class="btn btn-danger" data-toggle="modal" data-target="#modalDeleteRule<?= $ticket['id_ticket'] ?>">Delete</button>
