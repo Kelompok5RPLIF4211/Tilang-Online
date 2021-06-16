@@ -43,4 +43,9 @@ class Admin_model extends CI_Model
     $this->db->where('id_ticket', $id);
     return $this->db->delete('transaction');
     }
+    public function deleteTicket($id)
+    {
+    $this->db->where('id_ticket', $id);
+    return $this->db->delete('ticket');
+    }
 }
